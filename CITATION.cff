@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use these reproducibility materials, please cite this repository."
+title: "Reproducibility materials for Pareto-Front Based Parameter Selection in the Simple Divergence Minimizer"
+type: software
+authors:
+  - family-names: "Hatzivelkos"
+    given-names: "Aleksandar"
+repository-code: "https://github.com/USERNAME/SDM-calibration"
+license: MIT
+version: "1.0.0"
+date-released: "2026-08-16"

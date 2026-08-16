@@ -1,0 +1,4 @@
+"m","profiles","nCalibratedTopSupport","calibrationFrequencyTopSupport","nCalibratedPairwiseSupport","calibrationFrequencyPairwiseSupport","nBothCalibrated","nNeitherCalibrated","nTopSupportOnlyCalibrated","nPairwiseSupportOnlyCalibrated","statusAgreementFrequency","medianPStarTopSupportBoth","medianPStarPairwiseSupportBoth","medianAbsDeltaPStar","winnerAgreementFrequencyBoth"
+3,2400,132,0.055,45,0.01875,23,2246,109,22,0.9454166666666667,1.5938606847697756,2.6775089250297497,1.2777914619883572,1
+5,2400,1144,0.4766666666666667,805,0.33541666666666664,695,1146,449,110,0.7670833333333333,3.8681948424068757,3.9244186046511618,0,0.9856115107913669
+7,2400,1443,0.60125,1844,0.7683333333333333,1215,328,228,629,0.6429166666666667,2.009526644834772,3.2902754082378745,1.119225201220443,0.41069958847736626

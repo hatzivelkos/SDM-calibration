@@ -1,0 +1,28 @@
+# Wolfram / Mathematica temporary and backup files
+*.nb~
+*.m~
+*.wl~
+*.bak
+*.tmp
+*.autosave
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor files
+.vscode/
+.idea/
+
+# Temporary test output
+output/*_test/
+output/**/test_*.csv
+output/**/integration_*.csv
+
+# Python cache, if helper scripts are ever used locally
+__pycache__/
+*.py[cod]
+
+# Miscellaneous logs
+*.log

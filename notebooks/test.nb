@@ -1,0 +1,2114 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     93169,       2106]
+NotebookOptionsPosition[     91594,       2071]
+NotebookOutlinePosition[     92005,       2087]
+CellTagsIndexPosition[     91962,       2084]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+     "===", "===", "===", "===", "===", "===", "===", "===", "==="}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"Project", " ", "root", " ", "setup"}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"Notebook", " ", "is", " ", "assumed", " ", "to", " ", "be", " ", 
+    RowBox[{"inside", "/", "notebooks"}]}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+     "===", "===", "===", "===", "===", "===", "===", "===", "==="}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", 
+     RowBox[{
+     "$ProjectRoot", ",", "$SrcDir", ",", "$NotebooksDir", ",", "$OutputDir", 
+      ",", "$RawDir", ",", "$TablesDir", ",", "$FiguresDir"}], "]"}], ";"}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"$NotebooksDir", "=", 
+     RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"$ProjectRoot", "=", 
+     RowBox[{"DirectoryName", "[", "$NotebooksDir", "]"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"$SrcDir", "=", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"$ProjectRoot", ",", "\"\<src\>\""}], "}"}], "]"}]}], ";"}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"$OutputDir", "=", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"$ProjectRoot", ",", "\"\<output\>\""}], "}"}], "]"}]}], ";"}],
+    "\n", 
+   RowBox[{
+    RowBox[{"$RawDir", "=", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"$OutputDir", ",", "\"\<raw\>\""}], "}"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"$TablesDir", "=", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"$OutputDir", ",", "\"\<tables\>\""}], "}"}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"$FiguresDir", "=", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"$OutputDir", ",", "\"\<figures\>\""}], "}"}], "]"}]}], ";"}], 
+   "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Project root: \>\"", ",", "$ProjectRoot"}], "]"}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<Source directory: \>\"", ",", "$SrcDir"}], "]"}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.9958856156442375`*^9, 3.9958856156442375`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"592d8ffd-8eb3-fe45-9f1d-1a589615ec72"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Project root: \"\>", 
+   "\[InvisibleSpace]", "\<\"C:\\\\Users\\\\User\\\\OneDrive - \
+Veleu\[CHacek]ili\[SHacek]te Velika \
+Gorica\\\\RADNO_tekstovi\\\\MATEMATIKA\\\\r - SDM - samoregulirajuci \
+p\\\\GitHub\\\\\"\>"}],
+  SequenceForm[
+  "Project root: ", 
+   "C:\\Users\\User\\OneDrive - Veleu\[CHacek]ili\[SHacek]te Velika \
+Gorica\\RADNO_tekstovi\\MATEMATIKA\\r - SDM - samoregulirajuci p\\GitHub\\"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.995885623064295*^9, 3.995887247440651*^9, 
+  3.99588835283078*^9, 3.9958884514189568`*^9, 3.9958890350518436`*^9, 
+  3.995889597321739*^9, 3.995890202511772*^9, 3.99589673660882*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"5071242a-8680-534e-81c5-e59aef3bedda"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Source directory: \"\>", 
+   "\[InvisibleSpace]", "\<\"C:\\\\Users\\\\User\\\\OneDrive - \
+Veleu\[CHacek]ili\[SHacek]te Velika \
+Gorica\\\\RADNO_tekstovi\\\\MATEMATIKA\\\\r - SDM - samoregulirajuci \
+p\\\\GitHub\\\\src\"\>"}],
+  SequenceForm[
+  "Source directory: ", 
+   "C:\\Users\\User\\OneDrive - Veleu\[CHacek]ili\[SHacek]te Velika \
+Gorica\\RADNO_tekstovi\\MATEMATIKA\\r - SDM - samoregulirajuci \
+p\\GitHub\\src"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.995885623064295*^9, 3.995887247440651*^9, 
+  3.99588835283078*^9, 3.9958884514189568`*^9, 3.9958890350518436`*^9, 
+  3.995889597321739*^9, 3.995890202511772*^9, 3.99589673660882*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"566b9a2b-08fb-3f49-aa2a-4434c5002458"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+     "===", "===", "===", "===", "===", "===", "===", "===", "==="}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Calibration", ".", "wl"}], " ", "regression"}], "-", 
+    RowBox[{"test", " ", "loader"}]}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+     "===", "===", "===", "===", "===", "===", "===", "===", "==="}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", 
+     RowBox[{"(*", 
+      RowBox[{"Profile", ".", "wl"}], "*)"}], 
+     RowBox[{
+     "ProfileQ", ",", "ToRankMatrix", ",", "ProfileDimensions", ",", 
+      "VoterCount", ",", "CandidateCount", ",", 
+      RowBox[{"(*", 
+       RowBox[{"Signals", ".", "wl"}], "*)"}], "LossMatrix", ",", 
+      "TopSupport", ",", "PairwiseMargins", ",", "PairwiseSupport", ",", 
+      "LegitimacyVector", ",", "DpVector", ",", "DInfinitySDMVector", ",", 
+      "SDMCompromiseVector", ",", 
+      RowBox[{"(*", 
+       RowBox[{"Pareto", ".", "wl"}], "*)"}], "CriterionPointQ", ",", 
+      "CriterionPoints", ",", "DCompare", ",", "DLeq", ",", "DLt", ",", 
+      "DEqualQ", ",", "DominatesQ", ",", "SameCriterionCoordinatesQ", ",", 
+      "ParetoFrontCandidates", ",", "ParetoFront", ",", "FrontSorted", ",", 
+      "ChordEndpoints", ",", 
+      RowBox[{"(*", 
+       RowBox[{"Geometry", ".", "wl"}], "*)"}], "NormalizedCandidatePoints", ",",
+       "ParetoGeometry", ",", "ChordValue", ",", "SignedAreaFromFront", ",", 
+      "SignedAreaDetails", ",", 
+      RowBox[{"(*", 
+       RowBox[{"Calibration", ".", "wl"}], "*)"}], "CalibrationScore", ",", 
+      "CalibrationEvaluation", ",", "CalibrateP", ",", "moduleFiles"}], "]"}],
+     ";"}], "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"moduleFiles", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"FileNameJoin", "[", 
+        RowBox[{"{", 
+         RowBox[{"$SrcDir", ",", "#"}], "}"}], "]"}], "&"}], "/@", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Profile.wl\>\"", ",", "\"\<Signals.wl\>\"", 
+        ",", "\"\<Pareto.wl\>\"", ",", "\"\<Geometry.wl\>\"", 
+        ",", "\"\<Calibration.wl\>\""}], "}"}]}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Do", "[", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"!", 
+         RowBox[{"FileExistsQ", "[", "file", "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<ERROR: file not found: \>\"", ",", "file"}], "]"}], ";",
+          "\[IndentingNewLine]", 
+         RowBox[{"Abort", "[", "]"}], ";"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"file", ",", "moduleFiles"}], "}"}]}], "]"}], ";"}], "\n", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Get", "/@", "moduleFiles"}], ";"}], "\n", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "Print", "[", "\"\<Calibration test modules loaded successfully:\>\"", 
+     "]"}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"Print", "/@", 
+     RowBox[{"(", 
+      RowBox[{"FileNameTake", "/@", "moduleFiles"}], ")"}]}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.995896810737007*^9, 3.995896811608658*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"1bbf0215-f3b7-f848-a469-f824c688116e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Calibration test modules loaded successfully:\"\>"], "Print",
+ CellChangeTimes->{3.9958968149169903`*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"47935500-dc80-b44b-a219-ce8f51ff83f5"],
+
+Cell[BoxData["\<\"Profile.wl\"\>"], "Print",
+ CellChangeTimes->{3.9958968149199886`*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"ce9af7ee-2398-ae47-ae11-e1f67e316961"],
+
+Cell[BoxData["\<\"Signals.wl\"\>"], "Print",
+ CellChangeTimes->{3.995896814924841*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"4f3c739e-ec19-9842-a6d7-365752bece51"],
+
+Cell[BoxData["\<\"Pareto.wl\"\>"], "Print",
+ CellChangeTimes->{3.99589681492684*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"e6642c36-df46-c14d-9a7b-24b430fe3c3f"],
+
+Cell[BoxData["\<\"Geometry.wl\"\>"], "Print",
+ CellChangeTimes->{3.9958968149288406`*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"73273c0d-535f-f34e-a74a-0f55442d611b"],
+
+Cell[BoxData["\<\"Calibration.wl\"\>"], "Print",
+ CellChangeTimes->{3.9958968149308395`*^9},
+ CellLabel->
+  "During evaluation of \
+In[11]:=",ExpressionUUID->"a422405b-0863-a749-ad01-8427b0a7ebaf"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+     "===", "===", "===", "===", "===", "===", "===", "===", "==="}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"Tests", " ", "for", " ", "corrected", " ", 
+    RowBox[{"Calibration", ".", "wl"}]}], "*)"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "===", "===", "===", "===", "===", "===", "===", "===", "===", "===", "===",
+     "===", "===", "===", "===", "===", "===", "===", "===", "==="}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", 
+     RowBox[{
+     "AOne", ",", "AMulti", ",", "oneEvaluation", ",", "oneCalibration", ",", 
+      "multiScoreAt3", ",", "multiCalibration", ",", "pairwiseCalibration", ",",
+       "tieSmallResult", ",", "tieLargeResult", ",", "regressionResult", ",", 
+      "regressionTraceAreas", ",", "calibrationTestReport"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Test", " ", "profiles"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Completely", " ", "ordered", " ", 
+      RowBox[{"profile", ".", "Candidate"}], " ", "1", " ", "dominates", " ", 
+      "geometrically"}], ",", 
+     RowBox[{"so", " ", "signed", " ", "area", " ", "is", " ", 
+      RowBox[{"zero", "."}]}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"AOne", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Three", "-", 
+      RowBox[{
+      "candidate", " ", "profile", " ", "with", " ", "a", " ", "genuine", " ",
+        "multi"}], "-", 
+      RowBox[{
+      "point", " ", "geometry", " ", "and", " ", "positive", " ", "signed", " ",
+        "area", " ", "around", " ", "p"}]}], "=", 
+     RowBox[{"3.", " ", "Ranking", " ", 
+      RowBox[{"multiplicities", ":", 
+       RowBox[{"3", " ", "x", " ", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "1", ",", "3"}], "}"}], " ", "2", " ", "x", " ", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "1", ",", "2"}], "}"}], " ", "4", " ", "x", " ", 
+        RowBox[{"{", 
+         RowBox[{"2", ",", "3", ",", "1"}], "}"}]}]}]}]}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"AMulti", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2", ",", "1", ",", "3"}], "}"}], ",", "3"}], "]"}], ",", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"3", ",", "1", ",", "2"}], "}"}], ",", "2"}], "]"}], ",", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2", ",", "3", ",", "1"}], "}"}], ",", "4"}], "]"}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Basic", " ", "fixed"}], "-", 
+     RowBox[{"p", " ", "evaluation"}]}], "*)"}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"oneEvaluation", "=", 
+     RowBox[{"CalibrationEvaluation", "[", 
+      RowBox[{"AOne", ",", "2.", ",", "\"\<TopSupport\>\""}], "]"}]}], ";"}], 
+   "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"multiScoreAt3", "=", 
+     RowBox[{"CalibrationScore", "[", 
+      RowBox[{"AMulti", ",", "3.", ",", "\"\<TopSupport\>\""}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Ordinary", " ", "calibration"}], "*)"}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"oneCalibration", "=", 
+     RowBox[{"CalibrateP", "[", 
+      RowBox[{"AOne", ",", 
+       RowBox[{"\"\<LegitimacySignal\>\"", "->", "\"\<TopSupport\>\""}]}], 
+      "]"}]}], ";"}], "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"multiCalibration", "=", 
+     RowBox[{"CalibrateP", "[", 
+      RowBox[{"AMulti", ",", 
+       RowBox[{"\"\<LegitimacySignal\>\"", "->", "\"\<TopSupport\>\""}], ",", 
+       RowBox[{"\"\<KeepTrace\>\"", "->", "True"}]}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"pairwiseCalibration", "=", 
+     RowBox[{"CalibrateP", "[", 
+      RowBox[{"AMulti", ",", 
+       RowBox[{"\"\<LegitimacySignal\>\"", 
+        "->", "\"\<PairwiseSupport\>\""}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"Synthetic", " ", "deterministic", " ", "tie"}], "-", 
+     RowBox[{"breaking", " ", "test"}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "Both", " ", "search", " ", "points", " ", "receive", " ", "the", " ", 
+       "same", " ", "positive", " ", 
+       RowBox[{"area", ".", "SmallerP"}], " ", "must", " ", "select", " ", 
+       "p"}], "=", "2"}], ";", 
+     RowBox[{
+      RowBox[{"LargerP", " ", "must", " ", "select", " ", "p"}], "=", 
+      "4."}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tieSmallResult", "=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", "CalibrationEvaluation", "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"CalibrationEvaluation", "[", 
+          RowBox[{"_", ",", "_", ",", "_"}], "]"}], ":=", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<areaSigned\>\"", "->", "1."}], ",", 
+           RowBox[{"\"\<frontSize\>\"", "->", "3"}], ",", 
+           RowBox[{"\"\<front\>\"", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0.", ",", "0.", ",", "1"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.5", ",", "0.6", ",", "2"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1.", ",", "1.", ",", "3"}], "}"}]}], "}"}]}]}], 
+          "|>"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"CalibrateP", "[", 
+         RowBox[{"AOne", ",", 
+          RowBox[{"\"\<GridU\>\"", "->", 
+           RowBox[{"{", 
+            RowBox[{"0.25", ",", "0.5"}], "}"}]}], ",", 
+          RowBox[{"\"\<RefineSteps\>\"", "->", "0"}], ",", 
+          RowBox[{"\"\<TieBreak\>\"", "->", "\"\<SmallerP\>\""}]}], "]"}]}]}],
+       "]"}]}], ";"}], "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tieLargeResult", "=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", "CalibrationEvaluation", "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"CalibrationEvaluation", "[", 
+          RowBox[{"_", ",", "_", ",", "_"}], "]"}], ":=", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<areaSigned\>\"", "->", "1."}], ",", 
+           RowBox[{"\"\<frontSize\>\"", "->", "3"}], ",", 
+           RowBox[{"\"\<front\>\"", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0.", ",", "0.", ",", "1"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0.5", ",", "0.6", ",", "2"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1.", ",", "1.", ",", "3"}], "}"}]}], "}"}]}]}], 
+          "|>"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"CalibrateP", "[", 
+         RowBox[{"AOne", ",", 
+          RowBox[{"\"\<GridU\>\"", "->", 
+           RowBox[{"{", 
+            RowBox[{"0.25", ",", "0.5"}], "}"}]}], ",", 
+          RowBox[{"\"\<RefineSteps\>\"", "->", "0"}], ",", 
+          RowBox[{"\"\<TieBreak\>\"", "->", "\"\<LargerP\>\""}]}], "]"}]}]}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Regression", " ", 
+     RowBox[{"fixture", ":", 
+      RowBox[{
+      "incumbent", " ", "must", " ", "survive", " ", "refinement"}]}]}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "The", " ", "coarse", " ", "grid", " ", "contains", " ", "only", " ", 
+       "u"}], "=", "0.5"}], ",", 
+     RowBox[{
+      RowBox[{"corresponding", " ", "to", " ", "p"}], "=", "2"}], ",", 
+     RowBox[{
+      RowBox[{
+      "where", " ", "the", " ", "synthetic", " ", "objective", " ", "equals", 
+       " ", "1.", " ", "The", " ", "refinement", " ", "window", " ", 
+       RowBox[{"is", "[", 
+        RowBox[{"0.4", ",", "0.6"}], "]"}], " ", "and", " ", "RefineFactor"}],
+       "=", 
+      RowBox[{
+      "5.", " ", "Without", " ", "explicitly", " ", "retaining", " ", "the", " ",
+        "incumbent"}]}], ",", 
+     RowBox[{"its", " ", "natural", " ", "grid", " ", "0.40"}], ",", "0.44", ",",
+      "0.48", ",", "0.52", ",", "0.56", ",", 
+     RowBox[{
+      RowBox[{"0.60", " ", "omits", " ", "u"}], "=", 
+      RowBox[{
+       RowBox[{"0.5", " ", 
+        RowBox[{"entirely", ".", "Every"}], " ", "one", " ", "of", " ", 
+        "those", " ", "new", " ", "points", " ", "has", " ", "area", " ", 
+        RowBox[{"zero", ".", 
+         RowBox[{"Therefore", ":", 
+          RowBox[{
+           RowBox[{"-", "the"}], " ", "corrected", " ", "algorithm", " ", 
+           "must", " ", "retain", " ", "u"}]}]}]}], "=", "0.5"}]}], ",", 
+     RowBox[{
+      RowBox[{"-", "areaStar"}], " ", "must", " ", "remain", " ", "1"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "the"}], " ", "final", " ", "front", " ", "must", " ", 
+       "remain", " ", 
+       RowBox[{"nondegenerate", ".", "This"}], " ", "is", " ", "a", " ", 
+       "direct", " ", "regression", " ", "test", " ", "for", " ", "the", " ", 
+       "incumbent"}], "-", 
+      RowBox[{"loss", " ", 
+       RowBox[{"bug", "."}]}]}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"regressionResult", "=", 
+     RowBox[{"Block", "[", 
+      RowBox[{
+       RowBox[{"{", "CalibrationEvaluation", "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"CalibrationEvaluation", "[", 
+          RowBox[{"_", ",", "p_", ",", "_"}], "]"}], ":=", 
+         RowBox[{"Module", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"u", ",", "area"}], "}"}], ",", 
+           RowBox[{
+            RowBox[{"u", "=", 
+             RowBox[{"N", "[", 
+              RowBox[{"1", "/", "p"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"area", "=", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Abs", "[", 
+                 RowBox[{"u", "-", "0.5"}], "]"}], "<", 
+                RowBox[{"10", "^", 
+                 RowBox[{"-", "10"}]}]}], ",", "1.", ",", "0."}], "]"}]}], ";",
+             "\[IndentingNewLine]", 
+            RowBox[{"<|", 
+             RowBox[{
+              RowBox[{"\"\<areaSigned\>\"", "->", "area"}], ",", 
+              RowBox[{"\"\<frontSize\>\"", "->", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"area", ">", "0."}], ",", "3", ",", "2"}], "]"}]}], ",", 
+              RowBox[{"\"\<front\>\"", "->", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"area", ">", "0."}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0.", ",", "0.", ",", "1"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0.5", ",", "0.7", ",", "2"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"1.", ",", "1.", ",", "3"}], "}"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0.", ",", "0.", ",", "1"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"1.", ",", "1.", ",", "2"}], "}"}]}], "}"}]}], 
+                "]"}]}]}], "|>"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"CalibrateP", "[", 
+         RowBox[{"AOne", ",", 
+          RowBox[{"\"\<GridU\>\"", "->", 
+           RowBox[{"{", "0.5", "}"}]}], ",", 
+          RowBox[{"\"\<RefineSteps\>\"", "->", "1"}], ",", 
+          RowBox[{"\"\<RefineFactor\>\"", "->", "5"}], ",", 
+          RowBox[{"\"\<InitialRefineHalfWidthU\>\"", "->", "0.1"}], ",", 
+          RowBox[{"\"\<DegenerateEps\>\"", "->", 
+           RowBox[{"10", "^", 
+            RowBox[{"-", "12"}]}]}], ",", 
+          RowBox[{"\"\<KeepTrace\>\"", "->", "True"}]}], "]"}]}]}], "]"}]}], 
+    ";"}], "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"regressionTraceAreas", "=", 
+     RowBox[{"Lookup", "[", 
+      RowBox[{
+       RowBox[{"regressionResult", "[", "\"\<searchTrace\>\"", "]"}], 
+       ",", "\"\<area\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Test", " ", "report"}], "*)"}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{"--", 
+     RowBox[{"--", 
+      RowBox[{"--", 
+       RowBox[{"--", 
+        RowBox[{"--", 
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", 
+                RowBox[{"--", 
+                 RowBox[{"--", 
+                  RowBox[{"--", 
+                   RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{"--", 
+                    RowBox[{
+                    "--", "--"}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]}]\
+}]}]}]}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"calibrationTestReport", "=", 
+     RowBox[{"TestReport", "[", 
+      RowBox[{"{", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"--", 
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", "input"}]}]}]}]}], " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"profiles", "--"}], "--"}], "--"}], "--"}], "--"}]}], 
+        "*)"}], 
+       RowBox[{
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"ProfileQ", "[", "AOne", "]"}], ",", "True", ",", 
+          RowBox[{"TestID", "->", "\"\<Degenerate test profile valid\>\""}]}],
+          "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"ProfileQ", "[", "AMulti", "]"}], ",", "True", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Multi-point test profile valid\>\""}]}], "]"}],
+         ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", "fixed"}]}]}]}]}], "-", 
+          RowBox[{"p", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"interface", "--"}], "--"}], "--"}], "--"}], 
+            "--"}]}]}], "*)"}], 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"AssociationQ", "[", "oneEvaluation", "]"}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<CalibrationEvaluation returns association\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"oneEvaluation", "[", "\"\<areaSigned\>\"", "]"}], ",", 
+          "0.", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<One-point geometry has zero signed area\>\""}]}], "]"}],
+         ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"NumericQ", "[", "multiScoreAt3", "]"}], ",", "True", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Multi-point fixed-p score is numeric\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"multiScoreAt3", ">", "0."}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Multi-point fixture has positive signed area at \
+p=3\>\""}]}], "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", "genuinely"}]}]}]}]}], " ", "degenerate", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"profile", "--"}], "--"}], "--"}], "--"}], "--"}]}], 
+         "*)"}], 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"oneCalibration", "[", "\"\<status\>\"", "]"}], 
+          ",", "\"\<degenerate\>\"", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Zero-area profile classified degenerate\>\""}]}], "]"}],
+         ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"MissingQ", "[", 
+           RowBox[{"oneCalibration", "[", "\"\<pStar\>\"", "]"}], "]"}], ",", 
+          "True", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Degenerate profile has no pStar\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"MissingQ", "[", 
+           RowBox[{"oneCalibration", "[", "\"\<areaStar\>\"", "]"}], "]"}], ",",
+           "True", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Degenerate profile has no areaStar\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"oneCalibration", "[", "\"\<bestInitialArea\>\"", "]"}], "<=", 
+           RowBox[{"10", "^", 
+            RowBox[{"-", "12"}]}]}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Degenerate initial optimum below threshold\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", "ordinary"}]}]}]}]}], " ", "positive"}], "-", 
+          RowBox[{"area", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"calibration", "--"}], "--"}], "--"}], "--"}], 
+            "--"}]}]}], "*)"}], 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"AssociationQ", "[", "multiCalibration", "]"}], ",", "True",
+           ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Positive-area calibration returns association\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"multiCalibration", "[", "\"\<status\>\"", "]"}], 
+          ",", "\"\<calibrated\>\"", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Positive-area fixture is calibrated\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"NumericQ", "[", 
+           RowBox[{"multiCalibration", "[", "\"\<pStar\>\"", "]"}], "]"}], ",",
+           "True", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Calibrated profile has numeric pStar\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"1.", "<=", 
+           RowBox[{"multiCalibration", "[", "\"\<pStar\>\"", "]"}], "<=", 
+           "20."}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Calibrated pStar lies in search interval\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"multiCalibration", "[", "\"\<areaStar\>\"", "]"}], ">", 
+           RowBox[{"10", "^", 
+            RowBox[{"-", "12"}]}]}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Calibrated profile has positive final area\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"multiCalibration", "[", "\"\<frontSizeAtPStar\>\"", "]"}],
+            ">=", "3"}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Calibrated final front has at least three \
+points\>\""}]}], "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"multiCalibration", "[", "\"\<areaStar\>\"", "]"}], "-", 
+             RowBox[{"CalibrationScore", "[", 
+              RowBox[{"AMulti", ",", 
+               RowBox[{"multiCalibration", "[", "\"\<pStar\>\"", "]"}], 
+               ",", "\"\<TopSupport\>\""}], "]"}]}], "]"}], "<", 
+           RowBox[{"10", "^", 
+            RowBox[{"-", "12"}]}]}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Reported areaStar agrees with final geometry\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Max", "[", 
+            RowBox[{"Lookup", "[", 
+             RowBox[{
+              RowBox[{"multiCalibration", "[", "\"\<searchTrace\>\"", "]"}], 
+              ",", "\"\<area\>\""}], "]"}], "]"}], "==", 
+           RowBox[{"multiCalibration", "[", "\"\<areaStar\>\"", "]"}]}], ",", 
+          "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Final calibrated area equals best visited area\>\""}]}],
+          "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", "alternative"}]}]}]}]}], " ", "support", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"interface", "--"}], "--"}], "--"}], "--"}], "--"}]}], 
+         "*)"}], 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"AssociationQ", "[", "pairwiseCalibration", "]"}], ",", 
+          "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<PairwiseSupport passes through calibration\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"MemberQ", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<calibrated\>\"", ",", "\"\<degenerate\>\""}], "}"}],
+             ",", 
+            RowBox[{"pairwiseCalibration", "[", "\"\<status\>\"", "]"}]}], 
+           "]"}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<PairwiseSupport gives valid calibration status\>\""}]}],
+          "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{
+          "pairwiseCalibration", "[", "\"\<legitimacySignal\>\"", "]"}], 
+          ",", "\"\<PairwiseSupport\>\"", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<PairwiseSupport label propagated\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", 
+               RowBox[{"--", "deterministic"}]}]}]}]}], " ", "tie"}], "-", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"breaking", "--"}], "--"}], "--"}], "--"}], "--"}]}], 
+         "*)"}], 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"tieSmallResult", "[", "\"\<status\>\"", "]"}], 
+          ",", "\"\<calibrated\>\"", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Synthetic smaller-p tie case calibrated\>\""}]}], "]"}],
+         ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"tieSmallResult", "[", "\"\<pStar\>\"", "]"}], ",", "2.", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<SmallerP tie-break selects p=2\>\""}]}], "]"}],
+         ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"tieLargeResult", "[", "\"\<status\>\"", "]"}], 
+          ",", "\"\<calibrated\>\"", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Synthetic larger-p tie case calibrated\>\""}]}], "]"}], 
+        ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"tieLargeResult", "[", "\"\<pStar\>\"", "]"}], ",", "4.", ",", 
+          RowBox[{"TestID", "->", "\"\<LargerP tie-break selects p=4\>\""}]}],
+          "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", "option"}]}]}]}]}], " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"validation", "--"}], "--"}], "--"}], "--"}], "--"}]}], 
+         "*)"}], 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"Quiet", "[", 
+           RowBox[{"CalibrateP", "[", 
+            RowBox[{"AOne", ",", 
+             RowBox[{"\"\<pMin\>\"", "->", "5."}], ",", 
+             RowBox[{"\"\<pMax\>\"", "->", "2."}]}], "]"}], "]"}], ",", 
+          "$Failed", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Invalid search interval rejected\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"Quiet", "[", 
+           RowBox[{"CalibrateP", "[", 
+            RowBox[{"AOne", ",", 
+             RowBox[{"\"\<GridU\>\"", "->", 
+              RowBox[{"{", "}"}]}]}], "]"}], "]"}], ",", "$Failed", ",", 
+          RowBox[{"TestID", "->", "\"\<Empty custom grid rejected\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"--", 
+           RowBox[{"--", 
+            RowBox[{"--", 
+             RowBox[{"--", 
+              RowBox[{"--", "incumbent"}]}]}]}]}], "-", 
+          RowBox[{"preservation", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"regression", "--"}], "--"}], "--"}], "--"}], 
+            "--"}]}]}], "*)"}], 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"regressionResult", "[", "\"\<status\>\"", "]"}], 
+          ",", "\"\<calibrated\>\"", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Regression incumbent remains calibrated\>\""}]}], "]"}],
+         ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"regressionResult", "[", "\"\<pStar\>\"", "]"}], ",", "2.", 
+          ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Regression incumbent pStar preserved\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"regressionResult", "[", "\"\<areaStar\>\"", "]"}], ",", 
+          "1.", ",", 
+          RowBox[{
+          "TestID", "->", "\"\<Regression incumbent area preserved\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"regressionResult", "[", "\"\<frontSizeAtPStar\>\"", "]"}], 
+          ",", "3", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Regression incumbent retains nondegenerate \
+front\>\""}]}], "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"Max", "[", "regressionTraceAreas", "]"}], ",", 
+          RowBox[{"regressionResult", "[", "\"\<areaStar\>\"", "]"}], ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Regression final area equals best area ever \
+visited\>\""}]}], "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{"MemberQ", "[", 
+           RowBox[{"regressionTraceAreas", ",", "0."}], "]"}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Regression refinement evaluated worse \
+candidates\>\""}]}], "]"}], ",", 
+        RowBox[{"VerificationTest", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"regressionResult", "[", "\"\<searchTrace\>\"", "]"}], 
+            "]"}], ">", "1"}], ",", "True", ",", 
+          RowBox[{
+          "TestID", 
+           "->", "\"\<Regression refinement actually executed\>\""}]}], 
+         "]"}]}], "}"}], "]"}]}], ";"}], "\n", "\[IndentingNewLine]", "\[IndentingNewLine]",
+    "calibrationTestReport"}]}]], "Input",
+ CellChangeTimes->{{3.9958968233483086`*^9, 3.995896824398321*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"4970396d-2f88-c045-96d8-31d44ce8dfee"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["TestReportObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxOpener"]], 
+              ButtonFunction :> (Typeset`open$$ = True), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Tests count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["34", "SummaryItem"]}]}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   InterpretationBox[
+                    StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+                    AutoDelete -> True], PercentForm], "SummaryItem"]}]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            PaneBox[
+             ButtonBox[
+              DynamicBox[
+               FEPrivate`FrontEndResource["FEBitmaps", "SummaryBoxCloser"]], 
+              ButtonFunction :> (Typeset`open$$ = False), Appearance -> None, 
+              BaseStyle -> {}, Evaluator -> Automatic, Method -> 
+              "Preemptive"], Alignment -> {Center, Center}, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}]], 
+            GraphicsBox[{
+              InsetBox[
+               BoxData[
+                FormBox[
+                 PaneBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "MUnitExpressions", "SuccessIcon"]], Alignment -> Center, 
+                  ImageSize -> 
+                  Dynamic[{
+                    Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], TraditionalForm]]]}, 
+             PlotRange -> {{0, 1}, {0, 1}}, Background -> GrayLevel[0.93], 
+             Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 
+                3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                 Magnification])}], Frame -> True, FrameTicks -> None, 
+             FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.55]]], 
+            GridBox[{{
+               RowBox[{
+                 TagBox["\"Tests count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["34", "SummaryItem"]}], ""}, {
+               RowBox[{
+                 TagBox["\"Success rate: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  TagBox[
+                   InterpretationBox[
+                    StyleBox["\"100%\"", ShowStringCharacters -> False], 1., 
+                    AutoDelete -> True], PercentForm], "SummaryItem"]}], ""}, {
+               RowBox[{
+                 TagBox["\"Success count: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox["34", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+               RowBox[{
+                 TagBox["\"Time elapsed: \"", "SummaryItemAnnotation"], 
+                 "\[InvisibleSpace]", 
+                 TagBox[
+                  
+                  TemplateBox[{
+                   "0.0155859`3.8117679662443194", "\"s\"", "seconds", 
+                    "\"Seconds\""}, "Quantity", SyntaxForm -> Mod], 
+                  "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+          AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  TestReportObject[<|
+   "Title" -> Automatic, "Aborted" -> False, 
+    "TestResults" -> <|
+     2052309985633337377 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "e6fd8652-f924-4511-8c5e-e7b826dfee2f", "TestID" -> 
+         "Degenerate test profile valid", "TestFileName" -> "", 
+         "EvaluationID" -> "7bcfe0b1-2448-4333-93b5-d63dfac5ce6e", "Input" -> 
+         HoldForm[
+           $CellContext`ProfileQ[$CellContext`AOne]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3808, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      4753464264587467034 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "f26bfe59-7764-4772-b9ec-eb5dbcc70690", "TestID" -> 
+         "Multi-point test profile valid", "TestFileName" -> "", 
+         "EvaluationID" -> "8ca97982-f71f-49a1-a6a7-d04b06c64e34", "Input" -> 
+         HoldForm[
+           $CellContext`ProfileQ[$CellContext`AMulti]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 4224, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 548702411897985635 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "8f2c9c6d-8401-4ed5-91b2-63abee2918e9", "TestID" -> 
+         "CalibrationEvaluation returns association", "TestFileName" -> "", 
+         "EvaluationID" -> "47f33ebc-8a7a-4776-94ca-9167ae48e7cb", "Input" -> 
+         HoldForm[
+           AssociationQ[$CellContext`oneEvaluation]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3744, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      7559872530116927991 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "72290e50-2865-4d42-8a0f-c27a7cf0e579", "TestID" -> 
+         "One-point geometry has zero signed area", "TestFileName" -> "", 
+         "EvaluationID" -> "f5028dd6-b16b-47a4-9efb-fb7faabe223f", "Input" -> 
+         HoldForm[
+           $CellContext`oneEvaluation["areaSigned"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[0.], "ActualMessages" -> {},
+          "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 3800, "IntermediateTestsTree" -> {}, 
+         "ExpectedOutput" -> HoldForm[0.], "Outcome" -> "Success", 
+         "FailureType" -> None|>], 4028740670989003760 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "dc612a09-367d-4202-b94e-b2b09f18669c", "TestID" -> 
+         "Multi-point fixed-p score is numeric", "TestFileName" -> "", 
+         "EvaluationID" -> "d2731c6c-6ff3-4278-9712-454b12c02721", "Input" -> 
+         HoldForm[
+           NumericQ[$CellContext`multiScoreAt3]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3816, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      8219974757591190602 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "93b2027d-62a3-4b0e-b826-10d400b52d1f", "TestID" -> 
+         "Multi-point fixture has positive signed area at p=3", 
+         "TestFileName" -> "", "EvaluationID" -> 
+         "c2ab7e2c-b1a2-4a89-b5f6-6dcd9e11caf3", "Input" -> 
+         HoldForm[$CellContext`multiScoreAt3 > 0.], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3816, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      6464528439968137754 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "4193fda9-7628-489b-8595-3417370324bf", "TestID" -> 
+         "Zero-area profile classified degenerate", "TestFileName" -> "", 
+         "EvaluationID" -> "5284b8e1-09ad-4492-89eb-5d4bdd1ce2d1", "Input" -> 
+         HoldForm[
+           $CellContext`oneCalibration["status"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm["degenerate"], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3736, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> 
+         HoldForm["degenerate"], "Outcome" -> "Success", "FailureType" -> 
+         None|>], 7854087515839408529 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "b201e185-a9af-4d96-8cd6-b70da73bf573", "TestID" -> 
+         "Degenerate profile has no pStar", "TestFileName" -> "", 
+         "EvaluationID" -> "d668b4b8-6033-43c8-8ba1-27bfd3d4dae5", "Input" -> 
+         HoldForm[
+           MissingQ[
+            $CellContext`oneCalibration["pStar"]]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3800, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      5859199635149779669 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "5ec8bdbd-7474-4b6c-8101-6f3c97dc422a", "TestID" -> 
+         "Degenerate profile has no areaStar", "TestFileName" -> "", 
+         "EvaluationID" -> "4988f82b-fb5b-4389-8020-00981051a7e0", "Input" -> 
+         HoldForm[
+           MissingQ[
+            $CellContext`oneCalibration["areaStar"]]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3800, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      7401030087691452267 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "25c82e89-ef7e-40a6-bf58-bcc99cf302ec", "TestID" -> 
+         "Degenerate initial optimum below threshold", "TestFileName" -> "", 
+         "EvaluationID" -> "40d7034d-d577-40c2-9316-caa587201e0d", "Input" -> 
+         HoldForm[$CellContext`oneCalibration["bestInitialArea"] <= 10^(-12)],
+          "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> 
+         HoldForm[True], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0``7.150514997831988, "CPUTimeUsed" -> 0., "MemoryUsed" -> 3824, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 839948244807215683 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "cfd59583-0351-4ae1-9d67-c61ed2072068", "TestID" -> 
+         "Positive-area calibration returns association", "TestFileName" -> 
+         "", "EvaluationID" -> "d26eedb9-9530-43fa-91ed-ff5d406f6875", 
+         "Input" -> HoldForm[
+           AssociationQ[$CellContext`multiCalibration]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3816, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      5548596740922623146 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "ab25c412-ada7-4cad-8fd9-97da31738ed6", "TestID" -> 
+         "Positive-area fixture is calibrated", "TestFileName" -> "", 
+         "EvaluationID" -> "baf9f69e-eede-483e-87fc-7505f76e4554", "Input" -> 
+         HoldForm[
+           $CellContext`multiCalibration["status"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm["calibrated"], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3864, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> 
+         HoldForm["calibrated"], "Outcome" -> "Success", "FailureType" -> 
+         None|>], 3177558207322825583 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "375d7524-a189-43b2-804a-efe9ece5279c", "TestID" -> 
+         "Calibrated profile has numeric pStar", "TestFileName" -> "", 
+         "EvaluationID" -> "81e6d8f8-908f-4307-9d8f-d455ae168b04", "Input" -> 
+         HoldForm[
+           NumericQ[
+            $CellContext`multiCalibration["pStar"]]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3816, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 142572342667803117 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "03fd36f8-9a85-40cf-9eb1-fa072cc535a3", "TestID" -> 
+         "Calibrated pStar lies in search interval", "TestFileName" -> "", 
+         "EvaluationID" -> "fb9e3692-bca9-4115-a375-242344b77415", "Input" -> 
+         HoldForm[1. <= $CellContext`multiCalibration["pStar"] <= 20.], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> HoldForm[True],
+          "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3816, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      5838305915046606504 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "764bac83-b5a0-4f20-a573-f07374347372", "TestID" -> 
+         "Calibrated profile has positive final area", "TestFileName" -> "", 
+         "EvaluationID" -> "aeeeca0f-237c-4773-897e-254297e129c9", "Input" -> 
+         HoldForm[$CellContext`multiCalibration["areaStar"] > 10^(-12)], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> HoldForm[True],
+          "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3824, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      8079191223257388328 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "990ec89f-c7ee-49b7-a37c-08b50f687d8b", "TestID" -> 
+         "Calibrated final front has at least three points", "TestFileName" -> 
+         "", "EvaluationID" -> "bd448a34-2d41-4899-a3bf-2f8e73ad0f60", 
+         "Input" -> HoldForm[$CellContext`multiCalibration[
+            "frontSizeAtPStar"] >= 3], "ExpectedMessages" -> HoldForm[{}], 
+         "ActualOutput" -> HoldForm[True], "ActualMessages" -> {}, 
+         "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 3816, "IntermediateTestsTree" -> {}, 
+         "ExpectedOutput" -> HoldForm[True], "Outcome" -> "Success", 
+         "FailureType" -> None|>], 5241756357620341667 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "e2c4d9b0-dba4-479b-ac4f-c917c456a87c", "TestID" -> 
+         "Reported areaStar agrees with final geometry", "TestFileName" -> "",
+          "EvaluationID" -> "148f6e7c-5da4-4f30-b730-8f7a83940cb3", "Input" -> 
+         HoldForm[
+          Abs[$CellContext`multiCalibration[
+              "areaStar"] - $CellContext`CalibrationScore[$CellContext`AMulti, 
+              $CellContext`multiCalibration["pStar"], "TopSupport"]] < 
+           10^(-12)], "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> 
+         HoldForm[True], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0``7.150514997831988, "CPUTimeUsed" -> 0., "MemoryUsed" -> 3824, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      1175505268918451157 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "5110d3e4-4a88-45aa-ad89-93f498879cd9", "TestID" -> 
+         "Final calibrated area equals best visited area", "TestFileName" -> 
+         "", "EvaluationID" -> "35717af1-8b81-4a80-893b-a5ea58d922ed", 
+         "Input" -> HoldForm[Max[
+             Lookup[
+              $CellContext`multiCalibration["searchTrace"], 
+              "area"]] == $CellContext`multiCalibration["areaStar"]], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> HoldForm[True],
+          "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3808, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      8204806565287714742 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "bbb0f772-ecb5-44ce-9ec8-a0429e5ad892", "TestID" -> 
+         "PairwiseSupport passes through calibration", "TestFileName" -> "", 
+         "EvaluationID" -> "5ab88e0a-282e-4b20-9442-74aa712d8da9", "Input" -> 
+         HoldForm[
+           AssociationQ[$CellContext`pairwiseCalibration]], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> HoldForm[True],
+          "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3816, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      5118108405676411686 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "b7ffafe1-a1e4-4eba-844c-1f09a57dc2e4", "TestID" -> 
+         "PairwiseSupport gives valid calibration status", "TestFileName" -> 
+         "", "EvaluationID" -> "83b76af8-e8d1-4648-90d3-fb6491d8b2cc", 
+         "Input" -> HoldForm[
+           MemberQ[{"calibrated", "degenerate"}, 
+            $CellContext`pairwiseCalibration["status"]]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[True], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3960, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      1186818141971679020 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "5e4fa3c7-db53-4d40-87bd-508739834f76", "TestID" -> 
+         "PairwiseSupport label propagated", "TestFileName" -> "", 
+         "EvaluationID" -> "67923714-e35b-41ad-b042-6f35a61b161d", "Input" -> 
+         HoldForm[
+           $CellContext`pairwiseCalibration["legitimacySignal"]], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> 
+         HoldForm["PairwiseSupport"], "ActualMessages" -> {}, 
+         "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 3800, "IntermediateTestsTree" -> {}, 
+         "ExpectedOutput" -> HoldForm["PairwiseSupport"], "Outcome" -> 
+         "Success", "FailureType" -> None|>], 6699416974904283013 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "12199844-5aaf-427f-b119-f96162166a8d", "TestID" -> 
+         "Synthetic smaller-p tie case calibrated", "TestFileName" -> "", 
+         "EvaluationID" -> "0fd628c2-700f-420b-87bc-bf31eb0fd70c", "Input" -> 
+         HoldForm[
+           $CellContext`tieSmallResult["status"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm["calibrated"], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3736, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> 
+         HoldForm["calibrated"], "Outcome" -> "Success", "FailureType" -> 
+         None|>], 5381739229521012275 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269526356`16.655219251148747*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "54b19186-3595-4758-9a33-b21202ba25ad", "TestID" -> 
+         "SmallerP tie-break selects p=2", "TestFileName" -> "", 
+         "EvaluationID" -> "68e83202-997b-4b3a-8929-dabb5051d314", "Input" -> 
+         HoldForm[
+           $CellContext`tieSmallResult["pStar"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[2.], "ActualMessages" -> {},
+          "AbsoluteTimeUsed" -> 0.0155859`5.343246883286574, "CPUTimeUsed" -> 
+         0., "MemoryUsed" -> 3744, "IntermediateTestsTree" -> {}, 
+         "ExpectedOutput" -> HoldForm[2.], "Outcome" -> "Success", 
+         "FailureType" -> None|>], 2596744167521411620 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269682215`16.65521925115044*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "73e58a13-26cc-4a45-a22a-41ec362ad885", "TestID" -> 
+         "Synthetic larger-p tie case calibrated", "TestFileName" -> "", 
+         "EvaluationID" -> "24184b86-edf6-4ded-93e6-f5ecd3aec27d", "Input" -> 
+         HoldForm[
+           $CellContext`tieLargeResult["status"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm["calibrated"], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3736, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> 
+         HoldForm["calibrated"], "Outcome" -> "Success", "FailureType" -> 
+         None|>], 2366603078875877388 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269682215`16.65521925115044*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "d75ca5ce-5e11-4c3c-874d-c51635b20c3c", "TestID" -> 
+         "LargerP tie-break selects p=4", "TestFileName" -> "", 
+         "EvaluationID" -> "6fd599fe-8154-4205-86a1-9c1089730366", "Input" -> 
+         HoldForm[
+           $CellContext`tieLargeResult["pStar"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[4.], "ActualMessages" -> {},
+          "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 3736, "IntermediateTestsTree" -> {}, 
+         "ExpectedOutput" -> HoldForm[4.], "Outcome" -> "Success", 
+         "FailureType" -> None|>], 6815349982180586090 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "2e3980cb-958d-4089-b520-63748220d02a", "TestID" -> 
+         "Invalid search interval rejected", "TestFileName" -> "", 
+         "EvaluationID" -> "b6acd3df-1f90-44a1-9499-1f3d939726b6", "Input" -> 
+         HoldForm[
+           Quiet[
+            $CellContext`CalibrateP[$CellContext`AOne, "pMin" -> 5., "pMax" -> 
+             2.]]], "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> 
+         HoldForm[$Failed], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0``7.150514997831988, "CPUTimeUsed" -> 0., "MemoryUsed" -> 3744, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[$Failed],
+          "Outcome" -> "Success", "FailureType" -> None|>], 
+      1276696943346007614 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "4e646eec-66bd-4938-8104-f7d3932f9641", "TestID" -> 
+         "Empty custom grid rejected", "TestFileName" -> "", "EvaluationID" -> 
+         "79363281-1da3-474f-a4f6-9ee08fe905e9", "Input" -> HoldForm[
+           Quiet[
+            $CellContext`CalibrateP[$CellContext`AOne, "GridU" -> {}]]], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> 
+         HoldForm[$Failed], "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 
+         0``7.150514997831988, "CPUTimeUsed" -> 0., "MemoryUsed" -> 3744, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[$Failed],
+          "Outcome" -> "Success", "FailureType" -> None|>], 
+      2443186276234148612 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "30512379-18ac-46b6-aec9-2042c50000e3", "TestID" -> 
+         "Regression incumbent remains calibrated", "TestFileName" -> "", 
+         "EvaluationID" -> "2f87f51c-8516-4a19-8fad-3a047b38b5a0", "Input" -> 
+         HoldForm[
+           $CellContext`regressionResult["status"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm["calibrated"], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3800, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> 
+         HoldForm["calibrated"], "Outcome" -> "Success", "FailureType" -> 
+         None|>], 6299057933345497966 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "c09c7a0b-ccc1-4331-aec2-f8a20cec390e", "TestID" -> 
+         "Regression incumbent pStar preserved", "TestFileName" -> "", 
+         "EvaluationID" -> "4923c165-f0de-45eb-bae1-798c574afea8", "Input" -> 
+         HoldForm[
+           $CellContext`regressionResult["pStar"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[2.], "ActualMessages" -> {},
+          "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 3800, "IntermediateTestsTree" -> {}, 
+         "ExpectedOutput" -> HoldForm[2.], "Outcome" -> "Success", 
+         "FailureType" -> None|>], 3426040488211814861 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "2a12dcfb-268b-4d36-afbd-304f23b76a22", "TestID" -> 
+         "Regression incumbent area preserved", "TestFileName" -> "", 
+         "EvaluationID" -> "fa59de75-5fff-45fe-99d1-cf2cbbf116a2", "Input" -> 
+         HoldForm[
+           $CellContext`regressionResult["areaStar"]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[1.], "ActualMessages" -> {},
+          "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 3800, "IntermediateTestsTree" -> {}, 
+         "ExpectedOutput" -> HoldForm[1.], "Outcome" -> "Success", 
+         "FailureType" -> None|>], 1311507290190259545 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "885d9180-cabb-404b-961a-68383a161d86", "TestID" -> 
+         "Regression incumbent retains nondegenerate front", "TestFileName" -> 
+         "", "EvaluationID" -> "4b0e5464-5f16-425e-a1e4-f5589ef93469", 
+         "Input" -> HoldForm[
+           $CellContext`regressionResult["frontSizeAtPStar"]], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> HoldForm[3], 
+         "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3800, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[3], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 751509290278727327 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "19643c04-f64e-4e74-9ba6-6dba9f2fa44d", "TestID" -> 
+         "Regression final area equals best area ever visited", 
+         "TestFileName" -> "", "EvaluationID" -> 
+         "d832af41-6832-44d1-a2eb-beee15622bd5", "Input" -> HoldForm[
+           Max[$CellContext`regressionTraceAreas]], "ExpectedMessages" -> 
+         HoldForm[{}], "ActualOutput" -> HoldForm[1.], "ActualMessages" -> {},
+          "AbsoluteTimeUsed" -> 0``7.150514997831988, "CPUTimeUsed" -> 0., 
+         "MemoryUsed" -> 3736, "IntermediateTestsTree" -> {}, 
+         "ExpectedOutput" -> HoldForm[1.], "Outcome" -> "Success", 
+         "FailureType" -> None|>], 8509021990719882355 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "6efe17a0-4a79-4c70-a354-503ce24507ed", "TestID" -> 
+         "Regression refinement evaluated worse candidates", "TestFileName" -> 
+         "", "EvaluationID" -> "e54b8e76-3093-4783-b6b4-88e817962da3", 
+         "Input" -> HoldForm[
+           MemberQ[$CellContext`regressionTraceAreas, 0.]], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> HoldForm[True],
+          "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3952, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>], 
+      2201034812376501896 -> 
+      TestObject[<|
+        "MetaInformation" -> None, "AbsoluteTime" -> 
+         3.9958968269689619`16.655219251150516*^9, "SameTest" -> SameQ, 
+         "SameMessages" -> Testing`MessageMatchQ, "MemoryConstraint" -> 
+         DirectedInfinity[1], "TimeConstraint" -> DirectedInfinity[1], 
+         "CreationID" -> "8f80c8ee-ba06-4b54-ae84-67b5f9441cff", "TestID" -> 
+         "Regression refinement actually executed", "TestFileName" -> "", 
+         "EvaluationID" -> "061342bd-abe8-4f96-8653-a5293e6d4ee5", "Input" -> 
+         HoldForm[Length[
+             $CellContext`regressionResult["searchTrace"]] > 1], 
+         "ExpectedMessages" -> HoldForm[{}], "ActualOutput" -> HoldForm[True],
+          "ActualMessages" -> {}, "AbsoluteTimeUsed" -> 0``7.150514997831988, 
+         "CPUTimeUsed" -> 0., "MemoryUsed" -> 3888, 
+         "IntermediateTestsTree" -> {}, "ExpectedOutput" -> HoldForm[True], 
+         "Outcome" -> "Success", "FailureType" -> None|>]|>, 
+    "FailureResults" -> <||>, "TestsNotEvaluatedKeys" -> {}, 
+    "TestsFailedWrongResultsKeys" -> {}, "TestsFailedWithMessagesKeys" -> {}, 
+    "TestsSucceededKeys" -> {2052309985633337377, 4753464264587467034, 
+     548702411897985635, 7559872530116927991, 4028740670989003760, 
+     8219974757591190602, 6464528439968137754, 7854087515839408529, 
+     5859199635149779669, 7401030087691452267, 839948244807215683, 
+     5548596740922623146, 3177558207322825583, 142572342667803117, 
+     5838305915046606504, 8079191223257388328, 5241756357620341667, 
+     1175505268918451157, 8204806565287714742, 5118108405676411686, 
+     1186818141971679020, 6699416974904283013, 5381739229521012275, 
+     2596744167521411620, 2366603078875877388, 6815349982180586090, 
+     1276696943346007614, 2443186276234148612, 6299057933345497966, 
+     3426040488211814861, 1311507290190259545, 751509290278727327, 
+     8509021990719882355, 2201034812376501896}|>],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.995896827218788*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"ea920d0f-19fb-964f-83be-0c16106372b3"]
+}, Open  ]]
+},
+WindowSize->{778.5, 624.75},
+WindowMargins->{{179.25, Automatic}, {Automatic, 20.25}},
+FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (March 14, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"295b0d11-5bcf-c64b-b0a5-0ba6d58c6b0c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 2514, 64, 332, "Input",ExpressionUUID->"592d8ffd-8eb3-fe45-9f1d-1a589615ec72"],
+Cell[CellGroupData[{
+Cell[3115, 90, 791, 17, 39, "Print",ExpressionUUID->"5071242a-8680-534e-81c5-e59aef3bedda"],
+Cell[3909, 109, 807, 18, 39, "Print",ExpressionUUID->"566b9a2b-08fb-3f49-aa2a-4434c5002458"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4765, 133, 3487, 82, 541, "Input",ExpressionUUID->"1bbf0215-f3b7-f848-a469-f824c688116e"],
+Cell[CellGroupData[{
+Cell[8277, 219, 228, 4, 22, "Print",ExpressionUUID->"47935500-dc80-b44b-a219-ce8f51ff83f5"],
+Cell[8508, 225, 193, 4, 22, "Print",ExpressionUUID->"ce9af7ee-2398-ae47-ae11-e1f67e316961"],
+Cell[8704, 231, 191, 4, 22, "Print",ExpressionUUID->"4f3c739e-ec19-9842-a6d7-365752bece51"],
+Cell[8898, 237, 189, 4, 22, "Print",ExpressionUUID->"e6642c36-df46-c14d-9a7b-24b430fe3c3f"],
+Cell[9090, 243, 194, 4, 22, "Print",ExpressionUUID->"73273c0d-535f-f34e-a74a-0f55442d611b"],
+Cell[9287, 249, 197, 4, 22, "Print",ExpressionUUID->"a422405b-0863-a749-ad01-8427b0a7ebaf"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9533, 259, 40546, 1105, 3415, "Input",ExpressionUUID->"4970396d-2f88-c045-96d8-31d44ce8dfee"],
+Cell[50082, 1366, 41496, 702, 103, "Output",ExpressionUUID->"ea920d0f-19fb-964f-83be-0c16106372b3"]
+}, Open  ]]
+}
+]
+*)
+
