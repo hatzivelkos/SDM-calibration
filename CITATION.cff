@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: "Hatzivelkos"
     given-names: "Aleksandar"
-repository-code: "https://github.com/USERNAME/SDM-calibration"
+repository-code: "https://github.com/hatzivelkos/SDM-calibration"
 license: MIT
 version: "1.0.0"
 date-released: "2026-08-16"
